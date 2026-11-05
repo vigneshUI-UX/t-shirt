@@ -958,7 +958,6 @@ export default function App() {
                 <button className="button button-dark confirm-button" onClick={confirmOrder}>
                   CONFIRM ORDER <span></span>
                 </button>
-                <p className="checkout-note">THIS IS A FRONT-END DEMO CHECKOUT.</p>
               </aside>
             </div>
           )}
