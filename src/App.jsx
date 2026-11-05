@@ -4,7 +4,7 @@ import "./App.css";
 const PRODUCTS = [
   {
     id: 1,
-    name: "Essential Oversized Tee",
+    name: "Essential Oversized",
     category: "Essentials",
     basePrice: 899,
     image: "https://i.pinimg.com/736x/e3/5d/28/e35d286cd4d666963e02b4ecfa772f75.jpg",
@@ -20,7 +20,7 @@ const PRODUCTS = [
   },
   {
     id: 2,
-    name: "Classic Street Tee",
+    name: "Classic Street",
     category: "Streetwear",
     basePrice: 999,
     image: "https://i.pinimg.com/1200x/91/20/7b/91207b86e9753e2857fdbc1beba8ae2c.jpg",
@@ -36,7 +36,7 @@ const PRODUCTS = [
   },
   {
     id: 3,
-    name: "Minimal Graphic Tee",
+    name: "Minimal Graphic",
     category: "Graphics",
     basePrice: 1099,
     image: "https://i.pinimg.com/1200x/b3/93/29/b39329f163ec7136b2e6a8d5333db952.jpg",
@@ -51,7 +51,7 @@ const PRODUCTS = [
   },
   {
     id: 4,
-    name: "Everyday Cotton Tee",
+    name: "Everyday Cotton",
     category: "Essentials",
     basePrice: 799,
     image: "https://i.pinimg.com/736x/07/de/ab/07deabca2a5c87df3ed8cce2d0c3d472.jpg",
@@ -67,7 +67,7 @@ const PRODUCTS = [
   },
   {
     id: 5,
-    name: "Urban Fit Tee",
+    name: "Urban Fit",
     category: "Streetwear",
     basePrice: 1199,
     image: "https://i.pinimg.com/736x/53/c9/b0/53c9b0d5975647230005531ab7aa131f.jpg",
@@ -82,7 +82,7 @@ const PRODUCTS = [
   },
   {
     id: 6,
-    name: "Signature Logo Tee",
+    name: "Signature Logo",
     category: "Graphics",
     basePrice: 999,
     image: "https://i.pinimg.com/1200x/d9/17/e8/d917e89c987f2013f522d26622ef5626.jpg",
@@ -99,13 +99,11 @@ const PRODUCTS = [
 
 const HERO_SLIDES = [
   {
-    eyebrow: "THE NEW EVERYDAY",
     title: "WEAR YOUR\nOWN STORY.",
     description: "Everyday essentials. Uncomplicated style. Made to move with you.",
     image: "https://rukminim2.flixcart.com/image/1536/1536/xif0q/t-shirt/b/m/8/s-basic-grey-wike-denims-original-imahrhgvjsazz8bf.jpeg?q=90",
   },
   {
-    eyebrow: "THE STREET EDIT",
     title: "MAKE ROOM\nFOR BOLD.",
     description: "Relaxed fits and timeless pieces made for your everyday rotation.",
     image: "https://rukminim2.flixcart.com/image/1536/1536/xif0q/t-shirt/0/z/m/s-2-smileeee-4line-wike-denims-original-imahzk4fvhzykhmb.jpeg?q=90",
@@ -137,25 +135,21 @@ const VIDEO_CLIPS = [
   {
     id: 1,
     title: "URBAN ROTATION",
-    subtitle: "STREET EDIT 01",
     video: "https://www.pexels.com/download/video/7317021/",
   },
   {
     id: 2,
     title: "DAILY MOTION",
-    subtitle: "STREET EDIT 02",
     video: "https://www.pexels.com/download/video/7317015/",
   },
   {
     id: 3,
     title: "MINIMAL AESTHETIC",
-    subtitle: "STREET EDIT 03",
     video: "https://www.pexels.com/download/video/9558222/",
   },
   {
     id: 4,
     title: "SIGNATURE FIT",
-    subtitle: "STREET EDIT 04",
     video: "https://www.pexels.com/download/video/7316387/",
   },
 ];
@@ -336,7 +330,7 @@ function ProductDetail({ product, onAddToCart }) {
       </div>
 
       <div className="detail-content">
-        <h2>{product.name}<span>.</span></h2>
+        <h2>{product.name}<span></span></h2>
         <p className="detail-description">
           Made for everyday comfort with a relaxed silhouette and a clean, easy-to-style look.
         </p>
@@ -386,10 +380,6 @@ function ProductDetail({ product, onAddToCart }) {
         >
           ADD TO BAG <span>＋</span>
         </button>
-
-        <p className="detail-footnote">
-          EASY RETURNS &nbsp; · &nbsp; SECURE CHECKOUT
-        </p>
       </div>
     </section>
   );
@@ -536,7 +526,7 @@ function CustomerReviews() {
           <div className="review-card" key={review.id}>
             <span className="review-rating">{review.rating}</span>
             <p className="review-comment">"{review.comment}"</p>
-            <h4 className="review-author">— {review.name}</h4>
+            <h4 className="review-author"> {review.name}</h4>
           </div>
         ))}
       </div>
@@ -596,7 +586,7 @@ function ContactUs({ onShowToast }) {
       </div>
       <div className="contact-layout">
         <div className="contact-info">
-          <h3>LET'S TALK.</h3>
+          <h3>LET'S TALK</h3>
           <p>Have questions about fits, orders, or custom drops? We're here to help.</p>
           <div className="contact-details">
             <p><strong>Email:</strong> trendy@threadtheory.com</p>
@@ -869,7 +859,6 @@ export default function App() {
 
         <section className="shop-filter section" aria-label="Shop categories">
           <div className="filter-heading">
-            <span>EXPLORE PRODUCTS</span>
             <div className="filter-buttons">
               {["All", "Essentials", "Streetwear", "Graphics"].map((category) => (
                 <button
